@@ -58,4 +58,7 @@ class Settings(BaseSettings):
         Returns:
             A tuple containing the sources and their order for loading the settings values.
         """
-        return MyEnvSettingsSource(settings_cls), MyDotEnvSettingsSource(settings_cls) 
+        return (
+            MyEnvSettingsSource(settings_cls),
+            MyDotEnvSettingsSource(settings_cls),  
+        )
